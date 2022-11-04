@@ -5,7 +5,7 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Learning Haskell – Uday Kiran
+    Haskell Programming From First Principles – Uday Kiran
   </title>
   
     
@@ -13,7 +13,7 @@
       <meta property='og:site_name' content='Uday Kiran' />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Learning Haskell' />
+      <meta property='og:title' content='Haskell Programming From First Principles' />
     
     
       <base href='/' />
@@ -580,6 +580,41 @@
     
       <!-- Variable bindings for this tree-->
   
+  
+
+
+  
+
+
+<!-- Rendering of this tree -->
+<div class='pl-2'>
+  <!-- Node's rootLabel-->
+  <div class='flex items-center my-2 space-x-2 justify-left'>
+    
+    
+      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
+        </path>
+      </svg>
+      
+  
+    <a class='font-bold text-red-600 hover:underline truncate' title='Haskell Programming From First Principles' href='Software/Haskell/haskell-programming-from-first-principles.html'>
+      Haskell Programming From First Principles
+    </a>
+    
+      
+  </div>
+
+  <!-- Node's children forest, displayed only on active trees
+    TODO: Use <details> to toggle visibility?
+  -->
+  
+    
+  
+</div>
+    
+      <!-- Variable bindings for this tree-->
+  
     
       
     
@@ -602,42 +637,7 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Haskell Programming From First Principles' href='Software/Haskell/haskell-programming-from-first-principles.html'>
-      Haskell Programming From First Principles
-    </a>
-    
-      
-  </div>
-
-  <!-- Node's children forest, displayed only on active trees
-    TODO: Use <details> to toggle visibility?
-  -->
-  
-    
-  
-</div>
-    
-      <!-- Variable bindings for this tree-->
-  
-  
-
-
-  
-
-
-<!-- Rendering of this tree -->
-<div class='pl-2'>
-  <!-- Node's rootLabel-->
-  <div class='flex items-center my-2 space-x-2 justify-left'>
-    
-    
-      <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
-        </path>
-      </svg>
-      
-  
-    <a class='font-bold text-red-600 hover:underline truncate' title='Learning Haskell' href='Software/Haskell/learning-haskell.html'>
+    <a class='hover:underline truncate' title='Learning Haskell' href='Software/Haskell/learning-haskell.html'>
       Learning Haskell
     </a>
     
@@ -784,104 +784,387 @@
           <main class='px-4 py-4'>
             <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    Learning Haskell
+    Haskell Programming From First Principles
   </a>
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Books</h2>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Preface</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Configure hexchat or irrsi in emacs to access #haskell-beginners freenode channel
+        </li>
+      
+        <li>
+          Spaced repetition and iterative deepening are effective strategies of learning.
+        </li>
+      
+        <li>
+          Solving exercises and returning to concepts can help develop intuition.
+        </li>
+      
+        <li>
+          Reason through the code samples and exercises in your head first, then type them out - either in REPL or in Source file.
+        </li>
+      
+        <li>
+          If you are stuck in a exercise for an extended period of time than come back later.
+        </li>
+      
+        <li>
+          All modern functional languages are based on lambda calculus.
+        </li>
+      
+        <li>
+          Solving the same problem in different ways increases your fluency and comfort with the way haskell works
+        </li>
+      
+        <li>
+          Writing yo6ur own thought processes can clarify your thoughts and make the solving of similar problems easier.
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Chapter 1 - All you need is lambda</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          In the Lambda expression - λx.x and λx.xa
+        </li>
+      
+        <li>
+          .x is called bound variable, a is called free variable.
+        </li>
+      
+        <li>
+          λx is called head and xa is called body.
+        </li>
+      
+        <li>
+          Beta-reduction - eliminating the head λx as its main purpose was to bind to a variable.
+        </li>
+      
+        <li>
+          Divergence - when x is substituted in λx.x then we get the same expression, thus it is in non-reducible form.
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Chapter 2 - Hello Haskell</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
     <p class='mb-3'>
-      <span class='done DONE'>DONE</span> - Learn you a Haskell for Great Good - Read this book along with solving exercises from first few chapters from haskell mooc(till chapter4a).
+      Reducible expressions are called redexes. Ex: 1+1
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      Haskell Programming from First Principles(HPFFP) - This book is too verbose and just eats my energy before heading to exercises. I have read up to 6th Chapter in this book.
+      Currying - applying a series of nested functions, each to an argument.
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      Get Programming with Haskell - I have read this book for chap17(Monoids and Semigroups), Chap21 and later.
+      Haskell evaluates to weak head normal form by default. ex: (f -&gt; (1, 2+f)) 2
     </p>
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Exercises</h2>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>(1  , 2 + 2)
+</code></pre></div>
     <p class='mb-3'>
-      Started with Learn you a Haskell book, simultaneously solve <strong>learn4haskell exercises</strong> from github.
-    </p>
-  
-    <p class='mb-3'>
-      haskell-mooc - solved a few chapters from this repo.
-    </p>
-  
-    <p class='mb-3'>
-      cis194(spring 2013) - Solved the first exercise only, the rest seems to be out of my understanding.
-    </p>
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Projects</h2>
-    <p class='mb-3'>
-      <a href='https://github.com/fpindia/fpindia-site' class='text-red-600 hover:underline' target='_blank' rel='noopener'>FPIndia Static Site</a> - Contributed to the static site which was utilising the unreleased development on multisite branch - <a href='https://github.com/EmaApps/ema/pull/81' class='text-red-600 hover:underline' target='_blank' rel='noopener'>multisite rewrite</a>.
+      2+2 is not evaluated until the last possible moment.
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      IDEA <a href='https://github.com/udaycruise2903/ideas/issues/1' class='text-red-600 hover:underline' target='_blank' rel='noopener'>CLI app for displaying the haskell meetups around the world</a>
-    </p>
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Conferences</h2>
-    <p class='mb-3'>
-      Haskell exchange - I attended the beginner track of it in 2021. It was gave me different perspectives on beginner struggles and how to overcome them.
-    </p>
-  
-    <p class='mb-3'>
-      Haskell love - I have to rewatch the videos of these.
+      Module names are capitalised. camelCase is used for variable names
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      <a href='https://www.functionalconf.com/' class='text-red-600 hover:underline' target='_blank' rel='noopener'>Functional Conference 2022(March 2022)</a> - I did not watch this conference after a few sessions.
-    </p>
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Mailing Lists</h2>
-    <p class='mb-3'>
-      <a href='https://haskellweekly.news/' class='text-red-600 hover:underline' target='_blank' rel='noopener'>haskellweekly</a> - I have been reading this every week, but not trying out things in blogs from last 6 months.
-    </p>
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Good Articles/Blogs</h2>
-    <p class='mb-3'>
-      <a href='https://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html' class='text-red-600 hover:underline' target='_blank' rel='noopener'>Functor, Applicatives and Monads in pictures</a>
+      2 + 2 is a reducible expression. 4 is a value(irreducible constant).
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      <a href='https://planet.haskell.org/' class='text-red-600 hover:underline' target='_blank' rel='noopener'>Planet Haskell</a> - Compilation of latest blog posts on haskell.
+      modulo 12 is used for a 12 hour clock. 12 is equivalent to both itself and 0.
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      <a href='https://www.schoolofhaskell.com/school/starting-with-haskell/basics-of-haskell' class='text-red-600 hover:underline' target='_blank' rel='noopener'>School of haskell</a>
+      $ allows everything on the right of expression to be evaluated first.
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      <span class='todo TODO'>TODO</span> <a href='https://serokell.io/blog/lexing-with-alex' class='text-red-600 hover:underline' target='_blank' rel='noopener'>Parsing with haskell</a>
+      Ex: (+1) 2. (+1) is called sectioning and allows us to pass
     </p>
   
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Chapter 3 - Strings</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
     <p class='mb-3'>
-      <a href='https://serokell.io/blog/whats-that-typeclass-monoid' class='text-red-600 hover:underline' target='_blank' rel='noopener'>Monoids</a>
-    </p>
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Meetups</h2>
-    <p class='mb-3'>
-      Las Gatos FP group - attended their <strong>Haskell in Depth</strong> Book discussion session.
-    </p>
-  
-    <p class='mb-3'>
-      Portland FP group - Haven't attended a single session till now.
-    </p>
-  
-    <p class='mb-3'>
-      Berlin FP group - This group conducts a online session every month called <strong>Bring Your Project, Get help with your code & socialise</strong>.
+      concat :: <span class='spurious-link' target='a'><em>a</em></span> -&gt; [a]
     </p>
   
+        </li>
+      
+        <li>
+          
     <p class='mb-3'>
-      <a href='https://twitter.com/FunctionalIndia/status/1553237013196726272' class='text-red-600 hover:underline' target='_blank' rel='noopener'>FP India Meetup</a> - I conducted this meetup this year. It was really wonderful to meet a few haskellers.
+      Prelude has functions with exceptions:
     </p>
-  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Podcasts</h2>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell' exports='both' post='org-babel-haskell-formatter(*this*)'>head ""
+"" !! 4
+</code></pre></div>
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Chapter 4 - Basic Datatypes</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
     <p class='mb-3'>
-      Haskell Weekly by Taylor Fausak - Listened to a few podcasts. I need to listen to this frequently.
+      Int size has a min and max range. Integer size depends on the system.
     </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      floating point can shift how many bits it uses to represent numbers before or after the decimal point.(DO NOT USE IN BUSINESS APPLICATIONS.)
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      In the case of Integer, and most numeric datatypes, these data constructors are not written out because they include an infinite series of whole numbers. We would need infinite data constructors stretching up from zero.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Num typeclass is a superclass of fractional typeclass.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      values of Fractional a =&gt; a default to the floating point doucble. It is better to use arbitrary precision sibling to Integer.
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>4 / 2
+</code></pre></div>
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      x /= 5. (/=) symbol means <strong>not equal to</strong>.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Ord typeclass has lexicographic ordering. ex: Chris &lt; Julie
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Scope is a way to refer to where a named binding to an expression is valid.
+    </p>
+  
+        </li>
+      
+        <li>
+          <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>data (,) a b
+</code></pre></div>
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      [char] - String, [a] - List
+    </p>
+  
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Chapter 5 - Types</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      (-&gt;) is an infix operator and right associative. ex:
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>f :: a -&gt; a -&gt; a
+-- associates to
+f :: a -&gt; (a -&gt; a)
+</code></pre></div>
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      function applicative is left associative. So, the leftmost or outermost arguments are evaluated first.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Int can make use of the Num and Integral typeclasses because it has instances of both.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Haskell's type inference is built on Damas-Hindley-Milner type system.
+    </p>
+  
+        </li>
+      
+        <li>
+          <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>f 1 2
+f :: Num a =&gt; a -&gt; a -&gt; a
+:t f 1
+f 1 :: Num a =&gt; a -&gt; a
+</code></pre></div>
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Chapter 6 - Types</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Do not use Read for Bool.
+        </li>
+      
+        <li>
+          Enum must be members of Ord, All members of Ord must be member of Num
+        </li>
+      
+        <li>
+          Don't use Int as an Implicit sum type as C programmers commonly do. . . .
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Chapter 11 - Algebraic Datatypes</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Type constructors are used only in Type Signatures, Data constructors are used at term level.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Type and data constructors that take no arguments are constants. In the context of type constructor, its type signature is a concrete type. ex: data PugType = pugData
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      :kind - to check the kind of a type.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Bool and [Int] are fully applied, concrete types, so their kind signatures have no function arrows.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      an empty list has to be applied to a concrete type before it is itself a concrete type.
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>:k []
+* -&gt; *
+</code></pre></div>
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>chapter 12 - Signaling adversity</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>type name = String
+type Age = Integer
+
+data Person = Person Name Age deriving Show
+
+mkPerson :: Name -&gt; Age -&gt; Maybe Person
+mkPerson name age
+  | name /= "" && age &gt;= 0 = Just $ Person name age
+  | otherwise = nothin
+</code></pre></div>
+        </li>
+      
+        <li>
+          :: syntax usually means "has type of".
+        </li>
+      
+        <li>
+          kind * is the kind of all standard lifeted types, while types that have the kind # are unlifted.
+        </li>
+      
+    </ul>
   
   <div class='flex items-center justify-center mt-2'>
   
     
-      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/udaycruise2903/udaycruise2903.github.io/edit/master/content/Software/Haskell/learning-haskell.org'>
+      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/udaycruise2903/udaycruise2903.github.io/edit/master/content/Software/Haskell/haskell-programming-from-first-principles.org'>
         <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
         </svg>
