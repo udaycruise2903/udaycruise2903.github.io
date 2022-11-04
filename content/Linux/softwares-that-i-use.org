@@ -1,0 +1,43 @@
+#+title: Softwares that i use in my Archlinux
+
+** Archlinux
+
+*After 10 months of using Archlinux, I am moving to Pop_OS! for better dev experince. I am Switching from Doom Emacs to Neovim.*
+
+**** xorg xorg-xinit xorg-xmodmap
+**** b43-firmware(driver)
+**** NetworkManager
+**** mpv
+**** udiskie
+**** ntfs-3g(driver)
+**** pavucontrol
+**** transmission-gtk
+**** lightdm(lightdm-gtk-greeter)
+**** accountsservice
+**** yay
+**** nitrogen
+**** brave
+**** qutebrowser, nyxt browser
+**** light
+**** pipewire
+**** pulseaudio volume control
+**** pulseaudio volume equaliser
+**** touchpad-indicator
+**** SimpleScreenRecorder
+**** Zathura
+**** [[https://github.com/ahrm/sioyek/releases][Sioyek PDF viewer]]
+**** Xfce4-screenshooter
+**** ffmpeg
+**** [[https://github.com/blueman-project/blueman][blueman bluetooth GUI]]
+**** [[https://archlinux.org/packages/?name=bluez][Bluez bluetooth protocol stack]]
+**** tmux
+
+** ghcup
+
+**** stack
+**** cabal
+**** ghci
+
+** DoomEmacs
+
+**** org-mode
