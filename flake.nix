@@ -20,7 +20,7 @@
             layers = [ ./content ];
             layersString = [ "./content" ];
             # port = 8080;
-            baseUrl = "udaycruise2903.github.io/"; # Change to "/" (or remove it entirely) if using CNAME
+            baseUrl = "/"; # Change to "/" (or remove it entirely) if using CNAME
             # prettyUrls = true;
           };
         };
