@@ -1,0 +1,4 @@
+#+title: Basics Of Haskell by Bartosz Milewski(School of Haskell)
+
+1. Functions have no state
+2. The type () is called unit -- loosely corresponding to void in C like languages.

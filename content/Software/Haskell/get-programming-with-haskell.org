@@ -1,0 +1,5 @@
+#+title: Get Programming With Haskell
+
+***** chapter 17 Semigroups and Monoids
+
+1.Monoid requires you to specify an identity element.

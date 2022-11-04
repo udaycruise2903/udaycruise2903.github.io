@@ -1,4 +1,4 @@
-#+title: Softwares that i use in my Archlinux
+#+title: Archlinux softwares that i use 
 
 ** Archlinux
 

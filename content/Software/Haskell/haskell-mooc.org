@@ -1,0 +1,19 @@
+#+title: Haskell Mooc
+
+#+title: Haskell Mooc
+
+***** Monoids and Semigroups
+
+1. *(head . tail) tail* computes the third element of a list.
+2. Lists are an instance of Semigroup with (++) as (<>):
+   [1] <> [2,3] => [1,2,3]
+3. 
+    #+begin_src haskell
+    data Sum a = Sum a
+    instance Num a => Semigroup (Sum a) where
+        Sum a <> Sum b = Sum (a + b)
+
+    data Product a = Product a
+    instance Num a => Semigroup (Product a) where
+        Product a <> Product b = Product (a * b)
+    #+end_src

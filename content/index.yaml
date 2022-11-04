@@ -3,6 +3,9 @@
 
 page:
   siteTitle: Uday Kiran
+  siteName: UdKi
+  headHtml: |
+    <snippet var="js.highlightjs" />
 
 template:
   theme: red

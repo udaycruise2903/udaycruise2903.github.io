@@ -1,0 +1,123 @@
+#+title: Haskell Programming From First Principles
+#+author: Uday Kiran
+#+date: <2022-06-26 Sun>
+#+OPTIONS: broken-links:t
+
+** Preface
+
+1. Configure hexchat or irrsi in emacs to access #haskell-beginners freenode channel
+2. Spaced repetition and iterative deepening are effective strategies of learning.
+3. Solving exercises and returning to concepts can help develop intuition.
+4. Reason through the code samples and exercises in your head first, then type them out - either in REPL or in Source file.
+5. If you are stuck in a exercise for an extended period of time than come back later.
+6. All modern functional languages are based on lambda calculus.
+7. Solving the same problem in different ways increases your fluency and comfort with the way haskell works
+8. Writing yo6ur own thought processes can clarify your thoughts and make the solving of similar problems easier.
+
+** Chapter 1 - All you need is lambda
+
+1. In the Lambda expression - λx.x and λx.xa
+2. .x is called bound variable, a is called free variable.
+3. λx is called head and xa is called body.
+4. Beta-reduction - eliminating the head λx as its main purpose was to bind to a variable.
+5. Divergence - when x is substituted in λx.x then we get the same expression, thus it is in non-reducible form.
+
+** Chapter 2 - Hello Haskell
+
+1. Reducible expressions are called redexes. Ex: 1+1
+2. Currying -  applying a series of nested functions, each to an argument.
+3. Haskell evaluates to weak head normal form by default. ex: (f -> (1, 2+f)) 2
+   #+begin_src haskell
+    (1  , 2 + 2)
+   #+end_src
+   2+2 is not evaluated until the last possible moment.
+
+4. Module names are capitalised. camelCase is used for variable names
+5. 2 + 2 is a reducible expression. 4 is a value(irreducible constant).
+6. modulo 12 is used for a 12 hour clock. 12 is equivalent to both itself and 0.
+7. $ allows everything on the right of expression to be evaluated first.
+8. Ex: (+1) 2. (+1) is called sectioning and allows us to pass
+
+** Chapter 3 - Strings
+
+1. concat :: [[a]] -> [a]
+2. Prelude has functions with exceptions:
+   #+begin_src haskell :exports both :post org-babel-haskell-formatter(*this*)
+   head ""
+   "" !! 4
+   #+end_src
+
+** Chapter 4 - Basic Datatypes
+
+1. Int size has a min and max range. Integer size depends on the system.
+2. floating point can shift how many bits it uses to represent numbers before or after the decimal point.(DO NOT USE IN BUSINESS APPLICATIONS.)
+3. In the case of Integer, and most numeric datatypes, these data constructors are not written out because they include an infinite series of whole numbers. We would need infinite  data constructors stretching up from zero.
+4. Num typeclass is a superclass of fractional typeclass.
+5. values of Fractional a => a default to the floating point doucble. It is better to use arbitrary precision sibling to Integer.
+   #+begin_src haskell
+   4 / 2
+   #+end_src
+6. x /= 5. (/=) symbol means *not equal to*.
+7. Ord typeclass has lexicographic ordering. ex: Chris < Julie
+8. Scope is a way to refer to where a named binding to an expression is valid.
+9.
+   #+begin_src haskell
+   data (,) a b
+   #+end_src
+10. [char] - String, [a] - List
+
+** Chapter 5 - Types
+
+1. (->) is an infix operator and right associative.
+    ex:
+    #+begin_src haskell
+    f :: a -> a -> a
+    -- associates to
+    f :: a -> (a -> a)
+    #+end_src
+2. function applicative is left associative. So, the leftmost or outermost arguments are evaluated first.
+3. Int can make use of the Num and Integral typeclasses because it has instances of both.
+4. Haskell's type inference is built on Damas-Hindley-Milner type system.
+5.
+   #+begin_src haskell
+    f 1 2
+    f :: Num a => a -> a -> a
+    :t f 1
+    f 1 :: Num a => a -> a
+   #+end_src
+
+** Chapter 6 - Types
+
+1. Do not use Read for Bool.
+2. Enum must be members of Ord, All members of Ord must be member of Num
+3. Don't use Int as an Implicit sum type as C programmers commonly do. . . .
+
+** Chapter 11 - Algebraic Datatypes
+
+1. Type constructors are used only in Type Signatures, Data constructors are used at term level.
+2. Type and data constructors that take no arguments are constants. In the context of type constructor, its type signature is a concrete type.
+   ex: data PugType = pugData
+3. :kind - to check the kind of a type.
+4. Bool and [Int] are fully applied, concrete types, so their kind signatures have no function arrows.
+5. an empty list has to be applied to a concrete type before it is itself a concrete type.
+   #+begin_src haskell
+   :k []
+   * -> *
+   #+end_src
+
+** chapter 12 - Signaling adversity
+
+1.
+   #+begin_src haskell
+   type name = String
+   type Age = Integer
+
+   data Person = Person Name Age deriving Show
+
+   mkPerson :: Name -> Age -> Maybe Person
+   mkPerson name age
+     | name /= "" && age >= 0 = Just $ Person name age
+     | otherwise = nothin
+   #+end_src
+2. :: syntax usually means "has type of".
+3. kind * is the kind of all standard lifeted types, while types that have the kind # are unlifted.
