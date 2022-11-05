@@ -5,15 +5,15 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Github – Uday Kiran
+    lstm-training – Uday Kiran
   </title>
   
     
-      <meta property='og:description' content />
+      <meta property='og:description' content='include ‘kha’ in VALID_LANGUAGES_CODES include “Liberation Serif” in in LATIN_FONTS inserrt kha ) :: under #LATIN with default treatment' />
       <meta property='og:site_name' content='Uday Kiran' />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Github' />
+      <meta property='og:title' content='lstm-training' />
     
     
       <base href='/' />
@@ -188,8 +188,17 @@
             </li>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='workshop.html'>
-                Workshop
+              <a class='px-1 font-bold' href='projects.html'>
+                Projects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='khasi-ocr.html'>
+                Khasi-OCR
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
                 <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
@@ -688,11 +697,7 @@
     
       <!-- Variable bindings for this tree-->
   
-    
-      
-    
-    
-
+  
 
 
   
@@ -705,12 +710,12 @@
     
     
       <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
         </path>
       </svg>
-    
+      
   
-    <a class='hover:underline truncate' title='lstm-training' href='Projects/Khasi-OCR/lstm-training.html'>
+    <a class='font-bold text-red-600 hover:underline truncate' title='lstm-training' href='Projects/Khasi-OCR/lstm-training.html'>
       lstm-training
     </a>
     
@@ -1159,7 +1164,11 @@
     
       <!-- Variable bindings for this tree-->
   
-  
+    
+      
+      
+    
+
 
 
   
@@ -1177,7 +1186,7 @@
       </svg>
       
   
-    <a class='font-bold text-red-600 hover:underline truncate' title='Github' href='Workshop/Github.html'>
+    <a class='font-bold hover:underline truncate' title='Github' href='Workshop/Github.html'>
       Github
     </a>
     
@@ -1243,16 +1252,84 @@
           <main class='px-4 py-4'>
             <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    Github
+    lstm-training
   </a>
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
+  <h2 id='edit-language-specificsh' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Edit language-specific.sh</h2>
+    <p class='mb-3'>
+      include ‘kha’ in VALID_LANGUAGES_CODES include “Liberation Serif” in in LATIN_FONTS inserrt kha ) :: under <span class='font-bold bg-gray-100 py-0.5 px-2 rounded-lg emanote:inline-tag:LATIN' title='Tag' data-tag='LATIN'><a href='-/tags/LATIN.html' title='Tag' class='text-red-600 mavenLinkBold hover:underline'>#LATIN</a></span> with default treatment
+    </p>
+  <h2 id='create-starter-traineddata' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>create starter traineddata</h2>
+    <p class='mb-3'>
+      use tesstrain.sh to generate starter traineddata using kha.train.training_text and kha.eval.training_text for‘kha’. If specified -lang option is not available in tessdatadir, then by default eng.traineddata is used.
+    </p>
+  <h2 id='merge-unicharsets' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Merge unicharsets</h2>
+    <p class='mb-3'>
+      all characters are not present in training test. Some rarely occuring characters were to be included. A textfile kha.txt was prepared containing frequent to rarely occuring characters. Then tesstrain.sh comand was used to generate starter traineddata. Only unicharset filewas retained.
+    </p>
+  <h2 id='use-combine_lang_model' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Use combine_lang_model</h2>
+    <p class='mb-3'>
+      Replace old starter traineddata generated using tesstrain.sh with new starter traineddata i. TO make punctuation list
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          cat filename.txt | tr -cd [:punct:] | fold -w 1 | sort | uniq -c | sort -bnr
+        </li>
+      
+        <li>
+          Copy punc.txt of eng and rename it as kha.punc.txt
+        </li>
+      
+    </ul>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          To make words list copy & paste the training and eval data in <a href='https://www.ltc.lu/enseignants/robert.reyland/wlist/' class='text-red-600 hover:underline' target='_blank' rel='noopener'>https://www.ltc.lu/enseignants/robert.reyland/wlist/</a>
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      Result: char count = 1424716 =&gt; 1354036 136807 too short words(s) removed 3133 capital words(s) removed
+    </p>
+  
+    <p class='mb-3'>
+      resulting 125516 words with count were copied to kha.words.txt file jong (50) – wordcount was removed manually using findall option in sublime editor.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          To make numbers list
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      manually insert the occurences in number.txt file by referencing eng.numbers.txt
+    </p>
+  
+    <p class='mb-3'>
+      Extract base model extract base model from eng.traineddata usign combine_tessdata and rename it as kha.lstm
+    </p>
+  <h2 id='lstm-training' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>LSTM training</h2>
+    <p class='mb-3'>
+      lfx192 spec is used. max_iterations was set to 300000. although training stops when error rate=0.01. Output info was stored in basetrain.log LSTM training can be continued from khalayer.checkpoint using –continue-from option
+    </p>
+  <h2 id='lstmeval' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>lstmeval</h2>
+    <p class='mb-3'>
+      eval text fiel used here has the same sourceof text used in training textfile.Hence CER=0.08 and word error rate=.19
+    </p>
   
   <div class='flex items-center justify-center mt-2'>
   
     
-      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/udaycruise2903/udaycruise2903.github.io/edit/master/content/Workshop/Github.md'>
+      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/udaycruise2903/udaycruise2903.github.io/edit/master/content/Projects/Khasi-OCR/lstm-training.md'>
         <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
         </svg>
@@ -1267,6 +1344,15 @@
             </div>
             
   <section class='flex flex-wrap items-end justify-center my-4 space-x-2 space-y-2 font-mono text-sm'>
+    
+      <!-- FIXME: The use of -/tags is wrong, because we should use routeUrl using Ema's encoder 
+        Perhaps Emanote should inject tagMetas with urls.
+      -->
+      <a title='Tag' class='px-1 bg-gray-100 rounded hover:bg-gray-50 hover:text-red-500' href='-/tags/LATIN.html'>
+        <!-- DoNotFormat -->
+        #LATIN
+        <!-- DoNotFormat -->
+      </a>
     
   </section>
 

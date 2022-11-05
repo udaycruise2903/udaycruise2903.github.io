@@ -5,15 +5,15 @@
   <meta charset='UTF-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
   <title>
-    Github – Uday Kiran
+    treasure hunt at Science Fest 2022 – Uday Kiran
   </title>
   
     
-      <meta property='og:description' content />
+      <meta property='og:description' content='Treasure hunt game is originally implemented using Flask, Heroku and Postgres. Every Team of 2-3 participants had to enter their event participant ID in this format(ex:PU12PU34). Once they enter Id, a random key is generated. The random key should be entered in the entry page after an exact time(marking the start of the event). Each team can get the link of entry page by scanning a QR Code.' />
       <meta property='og:site_name' content='Uday Kiran' />
       <meta property='og:image' content />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Github' />
+      <meta property='og:title' content='treasure hunt at Science Fest 2022' />
     
     
       <base href='/' />
@@ -188,8 +188,17 @@
             </li>
           
             <li class='inline-flex items-center'>
-              <a class='px-1 font-bold' href='workshop.html'>
-                Workshop
+              <a class='px-1 font-bold' href='projects.html'>
+                Projects
+              </a>
+              <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
+                <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
+              </svg>
+            </li>
+          
+            <li class='inline-flex items-center'>
+              <a class='px-1 font-bold' href='treasure-hunt.html'>
+                Treasure Hunt
               </a>
               <svg fill='currentColor' viewBox='0 0 20 20' class='w-auto h-5 text-gray-400'>
                 <path fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd'></path>
@@ -805,11 +814,7 @@
     
       <!-- Variable bindings for this tree-->
   
-    
-      
-    
-    
-
+  
 
 
   
@@ -822,12 +827,12 @@
     
     
       <svg class='w-4 h-4 flex-shrink-0 inline' fill='none' stroke='currentColor' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z'>
+        <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z'>
         </path>
       </svg>
-    
+      
   
-    <a class='hover:underline truncate' title='treasure hunt at Science Fest 2022' href='Projects/treasure-hunt/treasure-hunt-at-fest.html'>
+    <a class='font-bold text-red-600 hover:underline truncate' title='treasure hunt at Science Fest 2022' href='Projects/treasure-hunt/treasure-hunt-at-fest.html'>
       treasure hunt at Science Fest 2022
     </a>
     
@@ -1159,7 +1164,11 @@
     
       <!-- Variable bindings for this tree-->
   
-  
+    
+      
+      
+    
+
 
 
   
@@ -1177,7 +1186,7 @@
       </svg>
       
   
-    <a class='font-bold text-red-600 hover:underline truncate' title='Github' href='Workshop/Github.html'>
+    <a class='font-bold hover:underline truncate' title='Github' href='Workshop/Github.html'>
       Github
     </a>
     
@@ -1243,16 +1252,54 @@
           <main class='px-4 py-4'>
             <h1 class='flex items-end justify-center mb-4 p-3 bg-red-100 text-5xl font-extrabold text-black rounded'>
   <a class='z-40 tracking-tighter '>
-    Github
+    treasure hunt at Science Fest 2022
   </a>
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
+  <div xmlhtmlRaw><iframe width="560" height="315" src="https://www.youtube.com/embed/s-z2kYapD8c?start=115" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><div xmlhtmlRaw><br>
+</div><h2 id='working' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Working</h2>
+    <p class='mb-3'>
+      Treasure hunt game is originally implemented using Flask, Heroku and Postgres. Every Team of 2-3 participants had to enter their event participant ID in this format(ex:PU12PU34). Once they enter Id, a random key is generated. The random key should be entered in the entry page after an exact time(marking the start of the event). Each team can get the link of entry page by scanning a QR Code.
+    </p>
+  
+    <p class='mb-3'>
+      As the random key is entered and submitted, 10 random non-repeating locations along with 10 riddles are populated in the database for each ID that the team has used for registration(ex:PU12PU14). A riddle(pointing to a lab, place or Hall) is displayed in the entry*page along with unique_key. After arriving at their first location(solution to the riddle in entry_page), team should scan QR code to get the URL of the page containing next riddle and enter the unique_key from previous page. QR codes are sticked to walls or objects in real locations. This cycle of <strong>figuring out next location and entering the previously obtained unique_key</strong> is repeated for all the 10 locations.
+    </p>
+  
+    <p class='mb-3'>
+      The average distance and time taken to traverse between all the ten locations are caculated before the commencement of the game. Find the path distances CSV file <a href='https://github.com/nikhilkanta/th-bvj/blob/main/treasurehunt-pathlogic.xlsx%20-%20Sheet3.csv' class='text-red-600 hover:underline' target='_blank' rel='noopener'>here</a>
+    </p>
+  
+    <p class='mb-3'>
+      The final winner of the game is decided on this basis
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-disc'>
+      
+        <li>
+          maximum distance covered by a team in the best time compared to the average_time_measurement to traverse between all these 10 locations.
+        </li>
+      
+    </ul>
+  <h2 id='result' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Result</h2>
+    <p class='mb-3'>
+      results are calculated using jupyter notebook utilising pandas, numpy and matplotlib.
+    </p>
+  <h2 id='participation' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Participation</h2>
+    <p class='mb-3'>
+      More than 160 students had participated in the treasure hunt event. 37 teams successfully finished the game with each team consisting of 2 or 3 members.
+    </p>
+  <h2 id='credits' class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Credits</h2>
+    <p class='mb-3'>
+      I am grateful to <a href='https://github.com/nikhilkanta' class='text-red-600 hover:underline' target='_blank' rel='noopener'>Nikhil Kanta</a> for his guidance.
+    </p>
   
   <div class='flex items-center justify-center mt-2'>
   
     
-      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/udaycruise2903/udaycruise2903.github.io/edit/master/content/Workshop/Github.md'>
+      <a class='text-gray-300 hover:text-red-600 text-sm' title='Edit this page on GitHub' href='https://github.com/udaycruise2903/udaycruise2903.github.io/edit/master/content/Projects/treasure-hunt/treasure-hunt-at-fest.md'>
         <svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
           <path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z'></path>
         </svg>
