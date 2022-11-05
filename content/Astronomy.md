@@ -3,7 +3,7 @@ slug: astronomy
 order:
 ---
 
-# Astronomy
+# :telescope: Astronomy
 
 ```query
 path:./*
