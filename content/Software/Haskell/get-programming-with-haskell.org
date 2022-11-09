@@ -30,12 +30,12 @@ value in a context.
 
 1. applicative type signature. <*> operator (pro-
 nounced app)
-   #+begin_src haskell
-    (<*>) :: Applicative f => f (a -> b) -> f a -> f b
-   #+end_src
+#+begin_src haskell
+(<*>) :: Applicative f => f (a -> b) -> f a -> f b
+#+end_src
 2. limitation of Functor's fmap is that it only works on single-argument functions.
 3. Using Functor's <$> operator for partial application in a context
-   #+begin_src haskell
-   maybeInc = (+) <$> Just 1
-   #+end_src
+#+begin_src haskell
+maybeInc = (+) <$> Just 1
+#+end_src
 4. 
