@@ -1,7 +1,5 @@
 #+title: Haskell Mooc
 
-#+title: Haskell Mooc
-
 ***** Monoids and Semigroups
 
 1. *(head . tail) tail* computes the third element of a list.
