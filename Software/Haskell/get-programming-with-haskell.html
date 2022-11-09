@@ -30,7 +30,7 @@
 
 
   
-  <link href='tailwind.css?instanceId=fe0b0d7a-0702-4ec0-99cb-ee114f887de9' rel='stylesheet' type='text/css' />
+  <link href='tailwind.css?instanceId=feac011d-3fdf-4eb8-8417-2ab7080720c4' rel='stylesheet' type='text/css' />
 
   <!-- Heist error element -->
   <style>
@@ -988,8 +988,8 @@
       </svg>
     
   
-    <a class='hover:underline truncate' title='Haskell Mooc Haskell Mooc' href='Software/Haskell/haskell-mooc.html'>
-      Haskell Mooc Haskell Mooc
+    <a class='hover:underline truncate' title='Haskell Mooc' href='Software/Haskell/haskell-mooc.html'>
+      Haskell Mooc
     </a>
     
       
@@ -1257,14 +1257,121 @@
 </h1>
             <article class='overflow-auto'>
   <!-- What goes in this file will appear on top of note body-->
-  
-    <p class='mb-3'>
-      chapter 17 Semigroups and Monoids
-    </p>
-  
+  <h3 class='mt-6 mb-2 text-3xl font-bold text-gray-700'>chapter 17 Semigroups and Monoids</h3>
     <p class='mb-3'>
       1.Monoid requires you to specify an identity element.
     </p>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>Unit5 - Working with type in a context</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Use Functor, when you have (a -&gt; b) in context.
+        </li>
+      
+        <li>
+          Use applicative, when you have (f a -&gt; b) in context.
+        </li>
+      
+        <li>
+          Use applicative, for Maybe (Int -&gt; Double).
+        </li>
+      
+        <li>
+          Use Monad, when (a -&gt; f b) is in context.
+        </li>
+      
+    </ul>
+  <h3 class='mt-6 mb-2 text-3xl font-bold text-gray-700'>chapter27 - The Functor typeclass</h3>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Transform the types of values inside a Maybe
+        </li>
+      
+        <li>
+          Types of kind * -&gt; * are parameterized types that take just one type parameter.
+        </li>
+      
+        <li>
+          Member of Functor include List, Map, Maybe and IO.
+        </li>
+      
+        <li>
+          [Int], Maybe Int, and IO Int can all use the same core functions.
+        </li>
+      
+        <li>
+          Functor’s &lt;$&gt; provides a common interface to apply any function to a
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      value in a context.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          Functor’s &lt;$&gt; provides a common interface to apply any function to a
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      value in a context.
+    </p>
+  
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      fmap type signature
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>fmap :: Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
+</code></pre></div>
+        </li>
+      
+    </ul>
+  <h2 class='inline-block mt-6 mb-4 text-4xl font-bold text-gray-700 border-b-2'>chapter28 - A peek at the applicative typeclass</h2>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          applicative type signature. &lt;*&gt; operator (pro-
+        </li>
+      
+    </ul>
+  
+    <p class='mb-3'>
+      nounced app)
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>(&lt;*&gt;) :: Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
+</code></pre></div>
+    <ul class='my-3 ml-6 space-y-1 list-decimal list-inside'>
+      
+        <li>
+          
+    <p class='mb-3'>
+      limitation of Functor's fmap is that it only works on single-argument functions.
+    </p>
+  
+        </li>
+      
+        <li>
+          
+    <p class='mb-3'>
+      Using Functor's &lt;$&gt; operator for partial application in a context
+    </p>
+  <div class='py-0.5 mb-3 text-sm'><pre><code class='haskell language-haskell'>maybeInc = (+) &lt;$&gt; Just 1
+</code></pre></div>
+        </li>
+      
+        <li>
+          
+        </li>
+      
+    </ul>
   
   <div class='flex items-center justify-center mt-2'>
   
