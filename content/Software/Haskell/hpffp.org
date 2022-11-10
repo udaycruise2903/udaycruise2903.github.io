@@ -27,11 +27,11 @@
 1. Reducible expressions are called redexes. Ex: 1+1
 2. Currying -  applying a series of nested functions, each to an argument.
 3. Haskell evaluates to weak head normal form by default. ex: (f -> (1, 2+f)) 2
+   
    #+begin_src haskell
-    (1  , 2 + 2)
-   #+end_src
+   (1  , 2 + 2)
    2+2 is not evaluated until the last possible moment.
-
+   #+end_src
 4. Module names are capitalised. camelCase is used for variable names
 5. 2 + 2 is a reducible expression. 4 is a value(irreducible constant).
 6. modulo 12 is used for a 12 hour clock. 12 is equivalent to both itself and 0.
@@ -42,6 +42,7 @@
 
 1. concat :: [[a]] -> [a]
 2. Prelude has functions with exceptions:
+   
    #+begin_src haskell :exports both :post org-babel-haskell-formatter(*this*)
    head ""
    "" !! 4
@@ -54,6 +55,7 @@
 3. In the case of Integer, and most numeric datatypes, these data constructors are not written out because they include an infinite series of whole numbers. We would need infinite  data constructors stretching up from zero.
 4. Num typeclass is a superclass of fractional typeclass.
 5. values of Fractional a => a default to the floating point doucble. It is better to use arbitrary precision sibling to Integer.
+   
    #+begin_src haskell
    4 / 2
    #+end_src
@@ -70,6 +72,7 @@
 
 1. (->) is an infix operator and right associative.
     ex:
+    
     #+begin_src haskell
     f :: a -> a -> a
     -- associates to
