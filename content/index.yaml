@@ -25,7 +25,7 @@ template:
 
   # If you are hosting on GitLab Pages, you may want to remove this.
   urlStrategy: pretty
-  iconUrl: static/favicon.svg
+  iconUrl: static/favicon.jpg
 
 pandoc:
   rewriteClass:
